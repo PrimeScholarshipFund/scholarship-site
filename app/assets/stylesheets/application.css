@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @font-face {
+    font-family: 'cinzelregular';
+    src: url('/app/assets/stylesheets/headerFont/cinzel-regular-webfont.woff2') format('woff2'),
+         url('/app/assets/stylesheets/headerFont/cinzel-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'happy_times_at_the_ikobRg';
+    src: url('/app/assets/stylesheets/bodyFont/happy-times-at-the-ikob-webfont.woff2') format('woff2'),
+         url('/app/assets/stylesheets/bodyFont/happy-times-at-the-ikob-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'happy_times_at_the_ikobitalic';
+    src: url('/app/assets/stylesheets/bodyFontItalics/happy-times-at-the-ikob_italic-webfont.woff2') format('woff2'),
+         url('/app/assets/stylesheets/bodyFontItalics/happy-times-at-the-ikob_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'happy_times_at_the_ikobRg', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: white;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6  {
+    color: #007da4;
+    margin: 0%;
+    padding: 15pt;
+}
+
+h1 {
+    font-family: 'cinzelregular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 48pt;
+    padding: 30pt;
+}
+h2 {
+    font-family: 'happy_times_at_the_ikobitalic','Times New Roman', Times, serif;
+    font-size: 24pt;
+    padding: 25pt;
+}
