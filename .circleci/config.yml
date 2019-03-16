@@ -11,6 +11,7 @@ jobs:
           RAILS_ENV: test
       - image: circleci/postgres:10-alpine-postgis
         environment:
+          POSTGRES_USER: circleci
           POSTGRES_DB: scholarship_site_test
           POSTGRES_PASSWORD: ""
     steps:
