@@ -52,4 +52,4 @@ jobs:
             bundle exec rspec
       - run:
           name: 'Rubocop'
-          command: 'rubocop'
+          command: 'bundle exec rubocop'
