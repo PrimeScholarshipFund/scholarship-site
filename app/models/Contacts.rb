@@ -1,3 +1,0 @@
-class Contacts < ApplicationRecord
-
-end
