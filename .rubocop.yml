@@ -8,4 +8,6 @@ AllCops:
     - 'Rakefile'
     - 'Gemfile'
 Documentation:
-  Enabled: false    
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false

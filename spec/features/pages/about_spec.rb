@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.feature 'About', :type => :feature do
+RSpec.feature 'About', type: :feature do
   it 'displays board names' do
     visit '/pages/about'
 
