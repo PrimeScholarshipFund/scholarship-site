@@ -1,0 +1,21 @@
+= form_for @contact do |f|
+  = f.label :first_name
+  = f.text_field :first_name
+  = f.label :last_name
+  = f.text_field :last_name
+  = f.label :middle_initial
+  = f.text_field :middle_initial
+  = f.label :address_line_1
+  = f.text_field :address_line_1
+  = f.label :address_line_2
+  = f.text_field :address_line_2
+  = f.label :city
+  = f.text_field :city
+  = f.label :state
+  = f.text_field :state
+  = f.label :zip_code
+  = f.text_field :zip_code
+  = f.label :phone_number
+  = f.text_field :phone_number
+  = f.submit 'Submit'
+end
