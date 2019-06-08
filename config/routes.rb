@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get "/pages/:page" => "pages#show"
 
   resources :contacts, only: [:create, :new, :edit, :update]
+  resources :demographics, only: [:create, :new, :edit, :update]
 end
