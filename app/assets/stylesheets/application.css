@@ -14,8 +14,7 @@
  *= require_self
  */
 
-
- @font-face {
+@font-face {
     font-family: 'cinzelregular';
     src: url('/app/assets/stylesheets/headerFont/cinzel-regular-webfont.woff2') format('woff2'),
          url('/app/assets/stylesheets/headerFont/cinzel-regular-webfont.woff') format('woff');
@@ -131,5 +130,29 @@ h2 {
 }
 
 .right {
+    float: right;
+}
+
+#header {
+    padding: 0px;
+    margin-top: 30px;
+}
+
+#diversitech_logo {
+    margin-left: 100px;
+    width: 300px;
+}
+
+#navigation { 
+    float: right;
+    margin-right: 150px;
+}
+
+li {
+    display: inline-block;
+    margin: 20px 60px;
+}
+
+#head_button {
     float: right;
 }
