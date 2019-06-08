@@ -5,7 +5,6 @@ class DemographicsController < ApplicationController
 
   def new
     @demographic = Demographic.new
-    console
     render
   end
 
@@ -19,7 +18,6 @@ class DemographicsController < ApplicationController
   end
 
   def edit
-    console
     render
   end
 

@@ -29,16 +29,6 @@ class Demographic < ApplicationRecord
     do_not_wish_to_specify_education: 11,
   }
 
-  # enum race: {
-  #   white: 1,
-  #   hispanic_or_latino: 2,
-  #   black_african_american: 3,
-  #   native_american: 4,
-  #   asian_pacific_islander: 5,
-  #   other_race: 6,
-  #   do_not_wish_to_specify_race: 7,
-  # }
-
   RACES_ARRAY = ['White', 'Hispanic or Latino', 'Black or African American', 'Native American', 'Asian or Pacific Islander', 'Other', 'Do not wish to specify']
 
   enum lgbtq_status: {
