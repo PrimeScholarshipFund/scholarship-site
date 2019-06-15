@@ -26,14 +26,14 @@ class Demographic < ApplicationRecord
     professional: 8,
     doctorate: 9,
     other_education: 10,
-    do_not_wish_to_specify_education: 11,
+    do_not_wish_to_specify_education: 11
   }
 
-  RACES_ARRAY = ['White', 'Hispanic or Latino', 'Black or African American', 'Native American', 'Asian or Pacific Islander', 'Other', 'Do not wish to specify']
+  RACES_ARRAY = ['White', 'Hispanic or Latino', 'Black or African American', 'Native American', 'Asian or Pacific Islander', 'Other', 'Do not wish to specify'].freeze
 
   enum lgbtq_status: {
     yes: 1,
     not: 2,
-    do_not_wish_to_specify: 3,
+    do_not_wish_to_specify: 3
   }, _suffix: true
 end

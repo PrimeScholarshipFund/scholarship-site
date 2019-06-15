@@ -36,6 +36,6 @@ class DemographicsController < ApplicationController
   end
 
   def demographic_params
-    params.require(:demographic).permit(:gender, :age, :level_of_education, :lgbtq_status, race:[])
+    params.require(:demographic).permit(:gender, :age, :level_of_education, :lgbtq_status, race: [])
   end
 end
