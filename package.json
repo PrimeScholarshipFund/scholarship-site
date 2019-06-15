@@ -1,5 +1,7 @@
 {
   "name": "scholarship_site",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^6.8.0"
+  }
 }
