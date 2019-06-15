@@ -12,3 +12,4 @@ Documentation:
   Enabled: false
 Metrics/LineLength:
   Enabled: false
+require: rubocop-rails
