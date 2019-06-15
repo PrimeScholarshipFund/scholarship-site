@@ -114,3 +114,11 @@ h2 {
     padding-bottom: 3%;
     color: #a396a0;
 }
+
+.container {
+    text-align: left;
+}
+
+.right {
+    float: right;
+}

@@ -1,21 +1,50 @@
-= form_for @contact do |f|
-  = f.label :first_name
-  = f.text_field :first_name
-  = f.label :last_name
-  = f.text_field :last_name
-  = f.label :middle_initial
-  = f.text_field :middle_initial
-  = f.label :address_line_1
-  = f.text_field :address_line_1
-  = f.label :address_line_2
-  = f.text_field :address_line_2
-  = f.label :city
-  = f.text_field :city
-  = f.label :state
-  = f.text_field :state
-  = f.label :zip_code
-  = f.text_field :zip_code
-  = f.label :phone_number
-  = f.text_field :phone_number
-  = f.submit 'Submit'
-end
+.container
+  = form_for @contact do |f|
+    .pa2
+      .db.mb2
+        = f.label :first_name
+      .mb2.db.w-100
+        = f.text_field :first_name
+    .pa2
+      .db.mb2
+        = f.label :last_name
+      .mb2.db.w-100
+        = f.text_field :last_name
+    .pa2
+      .db.mb2
+        = f.label :middle_initial
+      .mb2.db.w-100
+        = f.text_field :middle_initial
+    .pa2
+      .db.mb2
+        = f.label :address_line_1
+      .mb2.db.w-100
+        = f.text_field :address_line_1
+    .pa2
+      .db.mb2
+        = f.label :address_line_2
+      .mb2.db.w-100
+        = f.text_field :address_line_2
+    .pa2
+      .db.mb2
+        = f.label :city
+      .mb2.db.w-100
+        = f.text_field :city
+    .pa2
+      .db.mb2
+        = f.label :state
+      .mb2.db.w-100
+        = f.text_field :state
+    .pa2
+      .db.mb2
+        = f.label :zip_code
+      .mb2.db.w-100
+        = f.text_field :zip_code
+    .pa2
+      .db.mb2
+        = f.label :phone_number
+      .mb2.db.w-100
+        = f.text_field :phone_number
+    .pa2
+      = f.submit 'Submit', { class: "right" }
+  end
