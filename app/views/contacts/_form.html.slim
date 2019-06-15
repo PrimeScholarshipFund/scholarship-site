@@ -1,39 +1,50 @@
-= form_for @contact do |f|
-  .fl.w-third.pa2.tr
-    = f.label :first_name
-  .fl.w-two-thirds.pa2.tl
-    = f.text_field :first_name
-  .fl.w-third.pa2
-    = f.label :last_name
-  .fl.w-two-thirds.pa2
-    = f.text_field :last_name
-  .fl.w-third.pa2
-    = f.label :middle_initial
-  .fl.w-two-thirds.pa2
-    = f.text_field :middle_initial
-  .fl.w-third.pa2
-    = f.label :address_line_1
-  .fl.w-two-thirds.pa2
-    = f.text_field :address_line_1
-  .fl.w-third.pa2
-    = f.label :address_line_2
-  .fl.w-two-thirds.pa2
-    = f.text_field :address_line_2
-  .fl.w-third.pa2
-    = f.label :city
-  .fl.w-two-thirds.pa2
-    = f.text_field :city
-  .fl.w-third.pa2
-    = f.label :state
-  .fl.w-two-thirds.pa2
-    = f.text_field :state
-  .fl.w-third.pa2
-    = f.label :zip_code
-  .fl.w-two-thirds.pa2
-    = f.text_field :zip_code
-  .fl.w-third.pa2
-    = f.label :phone_number
-  .fl.w-two-thirds.pa2
-    = f.text_field :phone_number
-  = f.submit 'Submit'
-end
+.container
+  = form_for @contact do |f|
+    .pa2
+      .db.mb2
+        = f.label :first_name
+      .mb2.db.w-100
+        = f.text_field :first_name
+    .pa2
+      .db.mb2
+        = f.label :last_name
+      .mb2.db.w-100
+        = f.text_field :last_name
+    .pa2
+      .db.mb2
+        = f.label :middle_initial
+      .mb2.db.w-100
+        = f.text_field :middle_initial
+    .pa2
+      .db.mb2
+        = f.label :address_line_1
+      .mb2.db.w-100
+        = f.text_field :address_line_1
+    .pa2
+      .db.mb2
+        = f.label :address_line_2
+      .mb2.db.w-100
+        = f.text_field :address_line_2
+    .pa2
+      .db.mb2
+        = f.label :city
+      .mb2.db.w-100
+        = f.text_field :city
+    .pa2
+      .db.mb2
+        = f.label :state
+      .mb2.db.w-100
+        = f.text_field :state
+    .pa2
+      .db.mb2
+        = f.label :zip_code
+      .mb2.db.w-100
+        = f.text_field :zip_code
+    .pa2
+      .db.mb2
+        = f.label :phone_number
+      .mb2.db.w-100
+        = f.text_field :phone_number
+    .pa2
+      = f.submit 'Submit', {class: "right"}
+  end
