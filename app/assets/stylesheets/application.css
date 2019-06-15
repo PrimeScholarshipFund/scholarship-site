@@ -42,14 +42,18 @@
 
 }
 
+.header {
+    grid-row: 1/2;
+}
+
 body {
     font-family: 'ostrich_sansmedium', Arial, Helvetica, sans-serif;
     font-size: 32px;
     background-color: white;
     text-align: center;
     display: grid;
-    grid-template-columns: 20%;
-    grid-template-rows: 20%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     padding: 45pt;
 }
 
@@ -70,6 +74,7 @@ h1 {
     font-size: 48pt;
     padding: 30pt;
     grid-column: 1/6;
+    grid-row: 2/3;
     text-shadow: 1px 1px #9a9fa8;
 }
 h2 {
@@ -84,19 +89,23 @@ h2 {
     width: 425px;
     float: left;
     padding: 4%;
-    grid-column: 1/3;
+    grid-column: 1/2;
 }
 
 .Right {
     border-radius: 8px;
     float: right;
     padding: 4%;
-    grid-column: 3/6;
     color: #5d535e;
+    grid-column: 3/6; 
 }
 
 .Right h3 {
     font-size: 45pt; 
+}
+
+.Right p {
+    font-size: 20pt;
 }
 
 #title {
