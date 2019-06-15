@@ -25,9 +25,9 @@
 }
 
 @font-face {
-    font-family: 'happy_times_at_the_ikobRg';
-    src: url('/app/assets/stylesheets/bodyFont/happy-times-at-the-ikob-webfont.woff2') format('woff2'),
-         url('/app/assets/stylesheets/bodyFont/happy-times-at-the-ikob-webfont.woff') format('woff');
+    font-family: 'ostrich_sansmedium';
+    src: url('/app/assets/stylesheets/bodyFont/ostrich-regular-webfont.woff2') format('woff2'),
+         url('/app/assets/stylesheets/bodyFont/ostrich-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -42,27 +42,75 @@
 
 }
 
-body {
-    font-family: 'happy_times_at_the_ikobRg', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    background-color: white;
-    text-align: center;
+.header {
+    grid-row: 1/2;
 }
 
-h1, h2, h3, h4, h5, h6  {
+body {
+    font-family: 'ostrich_sansmedium', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    background-color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 45pt;
+}
+
+#fullPage {
+    grid-column: 1/6;
+}
+
+h2, h3, h4, h5, h6  {
     color: #007da4;
     margin: 0%;
     padding: 15pt;
 }
 
 h1 {
+    color: black;
     font-family: 'cinzelregular', Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 48pt;
     padding: 30pt;
+    grid-column: 1/6;
+    grid-row: 2/3;
+    text-shadow: 1px 1px #9a9fa8;
 }
 h2 {
-    font-family: 'happy_times_at_the_ikobitalic','Times New Roman', Times, serif;
-    font-size: 24pt;
+    font-family: 'ostrich_sansmedium','Times New Roman', Times, serif;
+    font-size: 56pt;
     padding: 25pt;
+}
+
+.Left {
+    border-radius: 8px;
+    height: 475px;
+    width: 425px;
+    float: left;
+    padding: 4%;
+    grid-column: 1/2;
+}
+
+.Right {
+    border-radius: 8px;
+    float: right;
+    padding: 4%;
+    color: #5d535e;
+    grid-column: 3/6; 
+}
+
+.Right h3 {
+    font-size: 45pt; 
+}
+
+.Right p {
+    font-size: 20pt;
+}
+
+#title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    padding-bottom: 3%;
+    color: #a396a0;
 }
