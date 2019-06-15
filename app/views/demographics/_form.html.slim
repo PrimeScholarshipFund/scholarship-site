@@ -1,46 +1,88 @@
-= form_for @demographic do |f|
-  div
-    = f.label :gender, 'Gender'
-    = f.text_field :gender
-  div
-    = f.label :age, 'Age'
-    = f.text_field :age
-  fieldset
-    = f.label :level_of_education, 'Level of Education'
-    = f.radio_button :level_of_education, :some_high_school
-    = f.label :some_high_school, 'Some High School'
-    = f.radio_button :level_of_education, :high_school
-    = f.label :high_school, 'High School or Equivalent'
-    = f.radio_button :level_of_education, :some_college
-    = f.label :some_college, 'Some College Credits'
-    = f.radio_button :level_of_education, :trade_school
-    = f.label :trade_school, 'Trade, Technical, or Vocational School'
-    = f.radio_button :level_of_education, :associate
-    = f.label :associate, 'Associate Degree'
-    = f.radio_button :level_of_education, :bachelors
-    = f.label :bachelors, "Bachelor's Degree"
-    = f.radio_button :level_of_education, :masters
-    = f.label :masters, "Master's Degree"
-    = f.radio_button :level_of_education, :professional
-    = f.label :professional, 'Professional Degree'
-    = f.radio_button :level_of_education, :doctorate
-    = f.label :doctorate, 'Doctorate Degree'
-    = f.radio_button :level_of_education, :other_education
-    = f.label :other_education, 'Other Education'
-    = f.radio_button :level_of_education, :do_not_wish_to_specify_education
-    = f.label :do_not_wish_to_specify_education, 'Do not wish to specify'
-  fieldset
-    = f.label :lgbtq_status, 'LGBTQ Status'
-    = f.radio_button :lgbtq_status, :yes
-    = f.label :yes, 'LGBTQ'
-    = f.radio_button :lgbtq_status, :not
-    = f.label :not, 'Not LBGTQ'
-    = f.radio_button :lgbtq_status, :do_not_wish_to_specify
-    = f.label :do_not_wish_to_specify, 'Do not wish to specify'
-  fieldset
-    = f.label :race, 'Race/Ethnicity'
-    - Demographic::RACES_ARRAY.each do |race|
-      = f.label :race, race
-      = f.check_box :race, {multiple: true}, race, false
-  = f.submit 'Submit'
-end
+.container
+  = form_for @demographic do |f|
+    .pa2
+      .db.mb2
+        = f.label :gender, 'Gender'
+      .mb2.db.w-100
+        = f.text_field :gender
+    .pa2
+      .db.mb2
+        = f.label :age, 'Age'
+      .mb2.db.w-100
+        = f.text_field :age
+    .pa2
+      = field_set_tag('Level of Education', { class: "db mb2" }) do
+        .mb2.db.pl4.pt2
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :some_high_school
+            = f.label :some_high_school, 'Some High School'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :high_school
+            = f.label :high_school, 'High School or Equivalent'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :some_college
+            = f.label :some_college, 'Some College Credits'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :trade_school
+            = f.label :trade_school, 'Trade, Technical, or Vocational School'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :associate
+            = f.label :associate, 'Associate Degree'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :bachelors
+            = f.label :bachelors, "Bachelor's Degree"
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :masters
+            = f.label :masters, "Master's Degree"
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :professional
+            = f.label :professional, 'Professional Degree'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :doctorate
+            = f.label :doctorate, 'Doctorate Degree'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :other_education
+            = f.label :other_education, 'Other Education'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :level_of_education, :do_not_wish_to_specify_education
+            = f.label :do_not_wish_to_specify_education, 'Do not wish to specify'
+      end
+    .pa2
+      = field_set_tag('LGBTQ Status', { class: "db mb2" }) do
+        .mb2.db.pl4.pt2
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :lgbtq_status, :yes
+            = f.label :yes, 'LGBTQ'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :lgbtq_status, :not
+            = f.label :not, 'Not LBGTQ'
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :lgbtq_status, :do_not_wish_to_specify
+            = f.label :do_not_wish_to_specify, 'Do not wish to specify'
+      end
+    .pa2
+      = field_set_tag('Race/Ethnicity', { class: "db mb2" }) do
+        .mb2.db.pl4.pt2
+          - Demographic::RACES_ARRAY.each do |race|
+            .flex.items-center.mb2
+              .mr2
+                = f.check_box :race, {multiple: true}, race, false
+              = f.label :race, race
+      end
+    .pa2
+      = f.submit 'Submit', { class: "right" }
+  end
