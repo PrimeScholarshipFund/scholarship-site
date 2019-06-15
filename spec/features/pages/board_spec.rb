@@ -2,9 +2,9 @@
 
 require 'rails_helper'
 
-RSpec.feature 'About', type: :feature do
+RSpec.feature 'Board', type: :feature do
   it 'displays board names' do
-    visit '/pages/about'
+    visit '/pages/board'
 
     expect(page).to have_content 'Ilana Nagib'
     expect(page).to have_content 'Andy Krueger'
