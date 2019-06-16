@@ -10,5 +10,4 @@ html
       - flash.each do |key, value|
         div class="flash #{key}" =value
     = render "layouts/header"
-    .w-100.w-80-m.w-60-l.center.pb7
-      = yield
+    = yield
