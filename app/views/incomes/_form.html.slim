@@ -1,0 +1,64 @@
+.container
+  = form_for @income do |f|
+    .pa2
+      .db.mb2
+        = f.label :adjusted_gross_income, 'Adjusted Gross Income'
+      .mb2.db.w-100
+        = f.number_field :adjusted_gross_income
+    .pa2
+      .db.mb2
+        = f.label :filing_status, 'Filing Status'
+      .mb2.db.w-100
+        = f.text_field :filing_status
+    .pa2
+      .db.mb2
+        = f.label :dependents, 'Dependents'
+      .mb2.db.w-100
+        = f.number_field :dependents
+    .pa2
+      = field_set_tag('Do you recieve government assistance?', { class: "db mb2" })
+      .mb2.db.pl4.pt2
+        .flex.items-center.mb2
+          .mr2
+            = f.radio_button :government_assistance, true
+          = f.label :government_assistance, 'Yes'
+          .mr2
+            = f.radio_button :government_assistance, false
+          = f.label :government_assistance, 'No'
+    .pa2
+      .db.mb2
+        = f.label :government_assistance_notes, 'Please provide details about the type and amount of the assistance you recieve'
+      .mb2.db.w-100
+        = f.text_field :government_assistance_notes
+    .pa2
+      = field_set_tag('Do you plan to be employed during the bootcamp?', { class: "db mb2" })
+      .mb2.bd.pl4.pt2
+        .flex.items-center.mb2
+          .mr2
+            = f.radio_button :employed_during_bootcamp, true
+          = f.label :employed_during_bootcamp, 'Yes'
+          .mr2
+            = f.radio_button :employed_during_bootcamp, false
+          = f.label :employed_during_bootcamp, 'No'
+    .pa2
+      .db.mb2
+        = f.label :employed_during_bootcamp_notes, 'If your bootcamp is full time, it is typically not recommended that you work during that time, so that you can focus more on your learning. If you sill plan to work during your bootcamp, please provide the number of hours per week and amount per hour you expect to earn while in your bootcamp.'
+      .mb2.db.w-100
+        = f.text_field :employed_during_bootcamp_notes
+    .pa2
+      = field_set_tag('Will a friend or family member be helping to support you during your bootcamp?', { class: "db mb2" })
+        .mb2.db.pl4.pt2
+          .flex.items-center.mb2
+            .mr2
+              = f.radio_button :supported_by_other, true
+            = f.label :supported_by_other, 'Yes'
+            .mr2
+              = f.radio_button :supported_by_other, false
+            = f.label :supported_by_other, 'No'
+    .pa2
+      .db.mb2
+        = f.label :supported_by_other_notes, 'Please include information about this support.'
+      .mb2.db.w-100
+        = f.text_field :supported_by_other_notes
+    .pa2
+      = f.submit 'Submit', { class: "right" }

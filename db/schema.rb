@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_23_165311) do
+ActiveRecord::Schema.define(version: 2019_06_15_182029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,20 @@ ActiveRecord::Schema.define(version: 2019_03_23_165311) do
     t.integer "level_of_education"
     t.integer "lgbtq_status"
     t.string "race", default: [], array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "incomes", force: :cascade do |t|
+    t.integer "adjusted_gross_income"
+    t.string "filing_status"
+    t.integer "dependents"
+    t.boolean "government_assistance"
+    t.string "government_assistance_notes"
+    t.boolean "employed_during_bootcamp"
+    t.string "employed_during_bootcamp_notes"
+    t.boolean "supported_by_other"
+    t.string "supported_by_other_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

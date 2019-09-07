@@ -17,4 +17,5 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:create, :new, :edit, :update]
   resources :demographics, only: [:create, :new, :edit, :update]
+  resources :incomes, only: [:create, :new, :edit, :update]
 end
